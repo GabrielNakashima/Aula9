@@ -11,3 +11,22 @@ function validaCampo(){
     return valida;
 }
 
+//Função que adiciona a tarefa
+
+function adicionarTarefa(){
+        //Criando a variável que vai receber as tarefas
+    let linhas = document.getElementById("task");
+
+    if(validaCampo()){
+        alert("Preencha o campo com a tarefa")
+    }else{
+        //adicionando as tarefas
+        tarefas.push(linhas.value);
+        //passando para a proxima linha vazia
+        linhas.value="";
+        //chamando a função que vai mostrar as tarefas
+        listarTarefas();
+    }
+    //volta para o input da tarefa
+    document.getElementById("task").focus();
+}
